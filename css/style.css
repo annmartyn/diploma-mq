@@ -13,7 +13,6 @@ body {
 }
 
 .page__header {
-  z-index: 2;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,7 +23,7 @@ body {
 
 .page__header::after {
   content: '';
-  z-index: 1;
+  z-index: 0;
   position: absolute;
   top: 0; 
   left: 0; 
@@ -64,23 +63,29 @@ body {
 .menu__list {
   display: flex;
   justify-content: flex-end;
-  width: 1100px;
+  min-width: 1100px;
   padding-right: 50px;
   z-index: 5;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu__list-item {
   margin-right: 35px;
   display: inline-block;
-  z-index: 5;
+  z-index: 10;
 }
 
 .menu__list-item:last-child {
   margin-right: 0;
 }
 
-.menu__logo-block, .menu__logo, .header__motto {
+.menu__logo-block, .menu__logo, div.header__motto {
   z-index: 10;
+  position: relative;
 }
 
 .menu__link {
@@ -98,10 +103,10 @@ body {
 
 .header__motto {
   margin: 0 auto;
+  position: relative;
   text-align: center;  
   color: white;
   font-family: "Open Sans";
-  z-index: 10;
 }
 
 .main__page {
@@ -411,7 +416,7 @@ body {
 }
 
 .subscribe-field {
-  width: 100%;
+  width: 95%;
   height: 50px;
   border-radius: 0;
   border: none;
@@ -422,7 +427,7 @@ body {
   font-weight: 400;
   font-family: "Open Sans";
   color: #888888;
-  padding-left: 17px;
+  padding-left: 5%;
 }
 
 .subscribe-text {
@@ -444,6 +449,119 @@ body {
   font-family: "Open Sans";
   background-color: #b59f5b;
   margin-bottom: 52px;
+}
+
+.fill-button {
+  width: 331px;
+  height: 49px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Open Sans";
+  background-color: #b59f5b;
+  margin-bottom: 52px;
+  border: none;
+}
+
+.popup-back {
+  z-index: 12;
+  width:100%;
+  min-height:100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow:hidden;
+  position:fixed;
+  top: 0px;
+  display: none;
+}
+
+
+.popup-content {
+  margin: 70px auto;
+  width: 392px;
+  background-color: white;
+  position: fixed;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.question-text {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.question-days {
+  width: 331px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #f4f7f6;
+  border: none;
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+  font-family: "Open Sans";
+  -webkit-appearance: none;
+  padding-left: 10px;
+  padding-right: 25px;
+  box-sizing: border-box;
+}
+
+.question-days:focus {
+  width: 330px;
+  height: 48px;
+  background-color: #f4f7f6;
+  border: 1px solid #b59f5b;
+}
+
+.change-text {
+  height: 133px;
+  vertical-align: top;
+  width: 331px;
+  border: none;
+  background-color: #f4f7f6;
+}
+
+.select-arrows {
+  flex-shrink: 0;
+  position: relative;
+  right: 30px;
+  top: 3px;
+  bottom: 0;
+}
+
+.answer-text {
+  font-size: 13px;
+  color: #000000;
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.answers {
+  display: flex;
+  font-size: 13px;
+  line-height: 13px;
+  color: #000000;
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.answers > label {
+  margin-right: 10px;
+}
+
+.answer-box {
+  display: none;
 }
 
 .aside-tags-container {
@@ -513,7 +631,7 @@ body {
 
 .good-text {
   outline: 3px solid #b59f5b;
-  outline-offset: 25px;
+  outline-offset: 35px;
   box-sizing: border-box;
   flex-grow: 1;
 }
@@ -648,7 +766,7 @@ body {
   }
 
   .menu__logo {
-    padding-left: 15vw;
+    padding-left: 100px;
   }
 
   .header__motto {
@@ -837,7 +955,7 @@ body {
 
   .good {
     max-width: 295px;
-    margin-bottom: 40px;
+    margin: 3%;
   }
 
   .shop-item1 {
