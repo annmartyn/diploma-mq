@@ -63,7 +63,6 @@ body {
 .menu__list {
   display: flex;
   justify-content: flex-end;
-  min-width: 1100px;
   width: 90%;
   padding-right: 50px;
   z-index: 5;
@@ -958,6 +957,10 @@ body {
     height: 220px;
   }
 
+  .good-text {
+    width: 295px;
+  }
+
   .good {
     max-width: 295px;
     margin: 3%;
@@ -1050,11 +1053,13 @@ body {
     padding: 0;
     margin: 0 auto;
     width: 285px;
+    display: flex;
+    flex-direction: column;
   }
 
   .good {
     margin-bottom: 50px;
-    width: 285px;
+    width: 100%;
   }
 
   .good-photo {
