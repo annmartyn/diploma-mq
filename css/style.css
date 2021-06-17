@@ -5,6 +5,7 @@ body {
 @font-face {
   font-family: "Open Sans Bold";
   src: url(../fonts/OpenSans-Bold.woff);
+  font-weight: bold;
 }
 
 @font-face {
@@ -63,7 +64,6 @@ body {
 .menu__list {
   display: flex;
   justify-content: flex-end;
-  width: 90%;
   padding-right: 50px;
   z-index: 5;
 }
@@ -71,7 +71,6 @@ body {
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 90%;
 }
 
 .menu__list-item {
@@ -90,7 +89,6 @@ body {
 }
 
 .menu__link {
-  font-family: "Open Sans";
   text-decoration: none;
   font-size: 13px;
   color: #ffffff;
@@ -107,7 +105,8 @@ body {
   position: relative;
   text-align: center;  
   color: white;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 
 .main__page {
@@ -120,7 +119,7 @@ body {
   text-align: center;
   font-family: "Open Sans";
   color: #0f0d0e;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -153,51 +152,31 @@ body {
   content: '';
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 4px;
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 0;
 }
 
-.item-1 {
-  background-image: url(../images/trend1.jpg);
-  background-repeat: none;
-  background-size: cover;
-}
-
-.item-2 {
-  background-image: url(../images/trend2.jpg);
-  background-repeat: none;
-  background-size: cover;
-}
-
-.item-3 {
-  background-image: url(../images/trend3.jpg);
-  background-repeat: none;
-  background-size: cover;
-}
-
-.item-4 {
-  background-image: url(../images/trend4.jpg);
-  background-repeat: none;
-  background-size: cover;
+.img-item {
+  object-fit: cover;
+  width: 100%;
 }
 
 .main__trends-text {
-  position:relative;
-  left:0px;
-  top:0px;
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 25%;
+  margin-left: 35px;
+  margin-right: 35px;
   border: 3px solid #b59f5b;
   text-transform: uppercase;
-  padding: 3%;
+  padding: 15px;
   z-index: 12;
 }
 
@@ -207,8 +186,8 @@ body {
 }
 
 .tag__link {
-  margin-right: 3%;
-  font-weight: 700;
+  margin-right: 15px;
+  font-weight: bold;
   font-family: "Open Sans";
   text-decoration: none;
   color: #b59f5b;
@@ -219,7 +198,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   z-index: 10;
 }
@@ -233,7 +212,7 @@ body {
 .post {
   display: flex;
   justify-content: space-between;
-  width: 48%;
+  width: 50%;
   margin-bottom: 34px;
 }
 
@@ -255,7 +234,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   color: #b59f5b;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   text-decoration: none;
   margin-right: 20px;
@@ -269,7 +248,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #0f0d0e;
-  font-weight: 700;
+  font-weight: bold;
   font-family: 'Open Sans';
   text-transform: uppercase;
   margin-bottom: 0;
@@ -297,7 +276,7 @@ body {
 
 .post-text-author {
   color: #000000;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .post-text-contain {
@@ -322,7 +301,7 @@ body {
   font-size: 14px;
   line-height: 29px;
   color: #0f0d0e;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .aside-header-text::after, .goods-title::after {
@@ -365,7 +344,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   color: #000000;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   margin-top: 0;
   text-decoration: none;
@@ -381,8 +360,8 @@ body {
 }
 
 .search-field {
-  width: 284px;
-  height: 49px;
+  width: calc(100% - 51px);
+  height: 51px;
   margin-right: 0;
   border: none;
   border-radius: 0;
@@ -399,7 +378,7 @@ body {
 }
 
 .search-button {
-  width: 49px;
+  width: 51px;
   border: none;
   border-radius: 0;
   background-color: #b59f5b;
@@ -422,7 +401,7 @@ body {
 }
 
 .subscribe-field {
-  width: 95%;
+  width: calc(100% - 15px);
   height: 50px;
   border-radius: 0;
   border: none;
@@ -433,7 +412,7 @@ body {
   font-weight: 400;
   font-family: "Open Sans";
   color: #888888;
-  padding-left: 5%;
+  padding-left: 15px;
 }
 
 .subscribe-text {
@@ -451,7 +430,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   background-color: #b59f5b;
   margin-bottom: 52px;
@@ -464,7 +443,7 @@ body {
   text-transform: uppercase;
   font-size: 14px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   background-color: #b59f5b;
   margin-bottom: 52px;
@@ -473,8 +452,8 @@ body {
 
 .popup-back {
   z-index: 12;
-  width:100%;
-  min-height:100%;
+  width: 100%;
+  min-height: 100%;
   background-color: rgba(0,0,0,0.5);
   overflow:hidden;
   position:fixed;
@@ -584,7 +563,7 @@ body {
   font-family: "Open Sans";
   font-size: 12px;
   color: #0f0d0e;
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: none;
   border: 3px solid #ededed;
   padding: 6px 13px;
@@ -607,7 +586,7 @@ body {
   font-size: 14px;
   line-height: 48px;
   color: #000000;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   margin-right: 5px;
   text-decoration: none;
@@ -617,7 +596,7 @@ body {
   font-size: 14px;
   line-height: 48px;
   color: #b59f5b;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
   margin-right: 5px;
   text-decoration: none;
@@ -626,7 +605,7 @@ body {
 .aside-theme-number {
   font-size: 12px;
   color: #b59f5b;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
 }
 
@@ -640,6 +619,9 @@ body {
   outline-offset: 35px;
   box-sizing: border-box;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .goods__section {
@@ -660,7 +642,7 @@ body {
   font-family: "Open Sans";
   display: block;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .good-price {
@@ -681,7 +663,7 @@ body {
   line-height: 22px;
   color: #0f0d0e;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
 }
 
@@ -720,7 +702,7 @@ body {
   line-height: 24px;
   text-decoration: line-through;
   color: #0f0d0e;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
 }
 
@@ -728,7 +710,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   color: #0f0d0e;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
 }
 
@@ -751,7 +733,7 @@ body {
   text-decoration: none;
   font-size: 12px;
   color: #999999;
-  font-weight: 700;
+  font-weight: bold;
   font-family: "Open Sans";
 }
 
@@ -782,13 +764,14 @@ body {
     font-size: 45px;
     line-height: 75px;
     margin-top: 75px;
-    font-weight: 700;
+    font-weight: bold;
   }
  
   .full__menu {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-between;
   }
   
   .menu__logo-block {
@@ -799,6 +782,7 @@ body {
     width: 24.8%;
   }
   
+
   .main__trends-header {
     font-size: 20px;
   }
@@ -854,23 +838,11 @@ body {
     width: 300px;
     height: 200px;
   }
-
-  .shop-item1 {
-    background-image: url(../images/shop-item-desk1.jpg);
-  }
-
-  .shop-item2 {
-    background-image: url(../images/shop-item-desk2.jpg);
-  }
-
-  .shop-item3 {
-    background-image: url(../images/shop-item-desk3.jpg);
-  }
 }
 
 @media (min-width: 641px) and (max-width: 1200px) {
   .page__header {
-    padding-top: 8vw;
+    padding-top: 50px;
     background-image: url(../images/banner-bg-tablet.jpg);
   }
 
@@ -894,7 +866,7 @@ body {
   }
 
   .menu__logo {
-    padding-left: 2vw;
+    padding-left: 10px;
   }
   
   .full__menu {
@@ -902,16 +874,20 @@ body {
   }
 
   .header__motto {
-    width: 78vw;
+    width: 500px;
     font-size: 40px;
     line-height: 55px;
     margin-top: 98px;
-    font-weight: 700;
+    font-weight: bold;
   }
 
   .main-flex {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .posts-list {
+    width: 300px;
   }
 
   .post-photo {
@@ -922,9 +898,6 @@ body {
     flex-direction: row;
   }
 
-  .post {
-    width: 48%;
-  }
 
   .post {
     flex-direction: column;
@@ -947,8 +920,8 @@ body {
   .goods__section {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
     justify-content: space-between;
   }
 
@@ -963,19 +936,7 @@ body {
 
   .good {
     max-width: 295px;
-    margin: 3%;
-  }
-
-  .shop-item1 {
-    background-image: url(../images/shop-item-tablet1.jpg);
-  }
-
-  .shop-item2 {
-    background-image: url(../images/shop-item-tablet2.jpg);
-  }
-
-  .shop-item3 {
-    background-image: url(../images/shop-item-tablet3.jpg);
+    margin: 25px;
   }
 
   .socials-list {
@@ -984,10 +945,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  .aside-posts {
-    width: 30%;
-  }
-
   ul.menu__list {
     display: none;
   }
@@ -1013,17 +970,17 @@ body {
     font-size: 26px;
     line-height: 36px;
     margin-top: 33px;
-    font-weight: 700;
+    font-weight: bold;
   }
 
   .main-flex {
     flex-direction: column;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .post {
-    width: 90%;
+    width: 100%;
   }
 
   .page__header {
@@ -1032,7 +989,7 @@ body {
   }
 
   .aside-posts {
-    width: 90%;
+    width: 100%;
   }
 
   .post {
@@ -1066,18 +1023,6 @@ body {
     width: 285px;
     height: 285px;
     margin: 0 auto;
-  }
-
-  .shop-item1 {
-    background-image: url(../images/shop-item-mobile1.jpg);
-  }
-
-  .shop-item2 {
-    background-image: url(../images/shop-item-mobile2.jpg);
-  }
-
-  .shop-item3 {
-    background-image: url(../images/shop-item-mobile3.jpg);
   }
 
   .socials-list {
