@@ -167,6 +167,7 @@ body {
 .main__trends-text {
   position: absolute;
   left: 0px;
+  width: calc(100% - 70px);
   bottom: 10px;
   box-sizing: border-box;
   display: flex;
@@ -616,7 +617,7 @@ body {
 
 .good-text {
   outline: 3px solid #b59f5b;
-  outline-offset: 35px;
+  outline-offset: 30px;
   box-sizing: border-box;
   flex-grow: 1;
   display: flex;
@@ -686,6 +687,7 @@ body {
 
 .good-bottom {
   display: flex;
+  margin-top: 15px;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
@@ -747,7 +749,7 @@ body {
 .socials-list {
   width: 1200px;
   display: flex;
-  margin: 40px auto;
+  margin: 70px auto;
 }
 
 @media (min-width: 1201px) {
@@ -817,7 +819,7 @@ body {
   .goods__section {
     display: flex;
     justify-content: space-around;
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
   }
 
