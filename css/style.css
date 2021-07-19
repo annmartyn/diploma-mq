@@ -1098,10 +1098,6 @@ body {
     margin-bottom: 3px;
   }
 
-  .main__trends-post:nth-child(even) {
-    margin-right: 0;
-  }
-
   .main__trends-text {
     padding: 7px;
     left: 4px;
@@ -1130,10 +1126,6 @@ body {
     font-size: 12px;
     padding-right: 4px;
     margin-bottom: 3px;
-  }
-
-  .main__trends-post:nth-child(2n) {
-    margin-right: 0;
   }
 
   .main__trends-text {
