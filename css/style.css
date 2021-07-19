@@ -148,7 +148,6 @@ body {
 
 .main__trends-posts {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -176,15 +175,13 @@ body {
 
 .main__trends-text {
   position: absolute;
-  left: 0px;
-  width: calc(100% - 70px);
+  left: 35px;
+  right: 35px;
   bottom: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 35px;
-  margin-right: 35px;
   border: 3px solid #b59f5b;
   text-transform: uppercase;
   padding: 15px;
@@ -305,7 +302,17 @@ body {
   flex-direction: column;
 }
 
-.aside-header-text, .goods-title {
+.aside-header-text {
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  text-align: center;
+  font-size: 14px;
+  line-height: 29px;
+  color: #0f0d0e;
+  font-weight: bold;
+}
+
+.goods-title {
   text-transform: uppercase;
   font-family: "Open Sans";
   text-align: center;
@@ -371,7 +378,7 @@ body {
 }
 
 .search-field {
-  width: calc(100% - 51px);
+  flex-grow: 1;
   height: 51px;
   margin-right: 0;
   border: none;
@@ -412,7 +419,8 @@ body {
 }
 
 .subscribe-field {
-  width: calc(100% - 15px);
+  width: 100%;
+  box-sizing: border-box;
   height: 50px;
   border-radius: 0;
   border: none;
@@ -772,7 +780,7 @@ body {
   }
 
   .header__motto {
-    width: 47vw;
+    width: 600px;
     font-size: 45px;
     line-height: 75px;
     margin-top: 75px;
@@ -791,10 +799,14 @@ body {
   }
 
   .main__trends-post {
-    width: 24.8%;
+    width: 100%;
+    margin-right: 4px;
+  }
+ 
+  .main__trends-post:last-child {
+    margin-right: 0;
   }
   
-
   .main__trends-header {
     font-size: 20px;
   }
@@ -806,7 +818,7 @@ body {
   } 
 
   .page__header {
-    padding-top: 3vw;
+    padding-top: 20px;
     background-image: url(../images/banner-bg.jpg);
   }
 
@@ -966,19 +978,16 @@ body {
     justify-content: flex-end;
   }
 
-  .menu__logo-block {
-    width: 75vmin;
-  }
 
   .menu__logo-block {
-    width: 75vmin;
-    margin-top: 45vmin;
+    width: 360px;
+    margin-top: 300px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .header__motto {
-    width: 77vmin;
+    width: 360px;
     font-size: 26px;
     line-height: 36px;
     margin-top: 33px;
@@ -987,8 +996,8 @@ body {
 
   .main-flex {
     flex-direction: column;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 360px;
+    margin: 0 auto;
   }
 
   .post {
@@ -996,7 +1005,7 @@ body {
   }
 
   .page__header {
-    padding-top: 9vmin;
+    padding-top: 70px;
     background-image: url(../images/banner-mobile.jpg);
   }
 
@@ -1015,7 +1024,11 @@ body {
 
   .post-text {
     width: 100%;
-    min-width: 360px;
+    min-width: 345px;
+  }
+
+  .post-text-contain {
+    width: 100%;
   }
 
   .goods__section {
@@ -1044,68 +1057,104 @@ body {
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
   .main__trends-post {
-    width: 24.8%;
+    width: 100%;
     font-size: 14px;
+    line-height: 16px;
     margin-bottom: 4px;
+    margin-right: 4px;
+  }
+
+  .main__trends-post:last-child {
+    margin-right: 0;
   }
 
   .post__link {
     font-size: 14px;
+    line-height: 16px;
   }
   
   .main__trends-text {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: calc(100% - 30px);
+    padding: 7px;
+    left: 4px;
+    right: 4px;
   }
 
   .main__trends-header {
     font-size: 14px;
+    line-height: 16px;
   }
 }
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+  .main__trends-posts {
+    flex-wrap: wrap;
+  }
+
   .main__trends-post {
-    width: 49.6%;
+    width: 50%;
+    box-sizing: border-box;
     font-size: 14px;
-    margin-bottom: 4px;
+    line-height: 16px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+  }
+
+  .main__trends-post:nth-child(2n) {
+    margin-right: 0;
   }
 
   .main__trends-text {
-    margin-left: 15px;
-    margin-right: 15px;
-    width: calc(100% - 30px);
+    padding: 7px;
+    left: 4px;
+    right: 4px;
   }
 
   .post__link {
     font-size: 14px;
+    line-height: 16px;
   }
   
   .main__trends-header {
     font-size: 14px;
+    line-height: 16px;
   }
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
-  .main__trends-post {
-    width: 49.6%;
-    font-size: 16px;
-    margin-bottom: 3px;
+  .main__trends-posts {
+    flex-wrap: wrap;
   }
+
+  .main__trends-post {
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 12px;
+    margin-bottom: 3px;
+    border-right: white solid 3px;
+  }
+
+  .main__trends-post:nth-child(2n) {
+    margin-right: 0;
+  }
+
   
   .main__trends-header {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 640px) and (orientation: portrait) {
+  .main__trends-posts {
+    flex-wrap: wrap;
+  }
+
   .main__trends-post {
     width: 100%;
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 3px;
   }
   
   .main__trends-header {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
